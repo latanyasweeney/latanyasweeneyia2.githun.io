@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnackVerse | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Can be relocated into the 'style.css' file -->
+    <style>
+        .dashboard-section {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px 25px 45px 25px;
+            border-radius: 14px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.15);
+        }
+        .chart-title {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #ff4c4c;
+        }
+        .bar-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .bar-label {
+            min-width: 100px;
+            text-align: right;
+            margin-right: 14px;
+            font-size: 1.07rem;
+            color: #444;
+        }
+        .bar {
+            height: 24px;
+            border-radius: 5px;
+            margin-right: 12px;
+            background: #FFD93D;
+            box-shadow: 0 2px 8px rgba(255,76,76,0.12);
+        }
+        .bar-count {
+            font-weight: bold;
+            color: #ff4c4c;
+        }
+        .invoice-search {
+            margin-top: 30px;
+            padding-top: 16px;
+            border-top: 2px solid #eee;
+        }
+        #invoiceResults {
+            margin-top: 12px;
+            background: #fff7f7;
+            border-radius: 6px;
+            padding: 12px;
+            font-size: 1rem;
+            color: #333;
+        }
+        .dashboard-title { text-align:center; color:#ff4c4c; }
+        @media (max-width: 700px){
+            .dashboard-section { max-width:98vw; }
+            .bar-label { min-width: 70px; font-size:0.95rem; }
+            .bar { height: 18px; }
+        }
+    </style>
+    <!-- Tis marks the end of styling for the page -->
+
+</head>
+<body>
+    <header>
+        <h1>SnackVerse</h1>
+        <nav>
+            <a href="index.html">About Us</a>
+            <a href="register.html">Registration</a>
+            <a href="login.html">Login</a>
+            <a href="Products.html">Products</a>
+            <a href="Cart.html">Cart</a>
+            <a href="dashboard.html" class="active">Dashboard</a> <!-- This will have to be made visible on all other nav bar. -->
+        </nav>
+    </header>
+
+    <main class="dashboard-section">
+        <h2 class="dashboard-title">User & Invoice Statistics</h2>
+
+        <!-- Gender chart -->
+        <div>
+            <div class="chart-title">Users by Gender</div>
+            <div id="genderChart"></div>
+        </div>
+        <!-- Age group chart -->
+        <div style="margin-top:18px;">
+            <div class="chart-title">Users by Age Group</div>
+            <div id="ageChart"></div>
+        </div>
+
+        <!-- Invoice search -->
+        <div class="invoice-search">
+            <label for="trnSearch">Search Invoices by TRN:</label>
+            <input type="text" id="trnSearch" placeholder="000-000-000" style="margin-left:8px;">
+            <button onclick="ShowInvoices()">Search</button>
+            <div id="invoiceResults"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SnackVerse. All Rights Reserved.</p>
+    </footer>
+    <script src="dashboard.js"></script>
+</body>
+</html>
