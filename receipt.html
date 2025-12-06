@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnackVerse | Receipt</title>
+    <title>SnackVerse | Invoice</title>
     <link rel="stylesheet" href="style.css">
-
-   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <style>
@@ -34,6 +32,8 @@
             display: flex;
             align-items: center;
             margin-bottom: 15px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 10px;
         }
         .receipt-summary {
             margin-top: 25px;
@@ -53,36 +53,76 @@
             border-radius: 6px;
             cursor: pointer;
         }
+        .invoice-alert {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .invoice-table th, .invoice-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .invoice-table th {
+            background-color: #f2f2f2;
+        }
     </style>
 </head>
 
 <body>
 
 <main class="receipt-container" id="receiptBox">
-    <div class="receipt-header">
-        <h2>SnackVerse Order Receipt</h2>
-        <p><strong>Order #:</strong> <span id="orderID"></span></p>
+    <div class="invoice-alert" id="emailAlert">
+        Invoice has been sent to your email.
     </div>
 
-    <h3>Customer Information</h3>
+    <div class="receipt-header">
+        <h2>SnackVerse - Invoice</h2>
+        <p><strong>Date:</strong> <span id="invoiceDate"></span></p>
+        <p><strong>Invoice #:</strong> <span id="invoiceNumber"></span></p>
+        <p><strong>TRN:</strong> <span id="trn"></span></p>
+    </div>
+
+    <h3>Customer / Shipping Information</h3>
     <p><strong>Name:</strong> <span id="custName"></span></p>
     <p><strong>Address:</strong> <span id="custAddress"></span></p>
+    <p><strong>Email:</strong> <span id="custEmail"></span></p>
 
     <h3>Payment Information</h3>
     <p><strong>Cardholder:</strong> <span id="cardName"></span></p>
-    <p><strong>Card Number:</strong> <span id="cardNumber"></span></p>
+    <p><strong>Card Number:</strong> **** **** **** <span id="cardLast4"></span></p>
 
-    <h3>Items Purchased</h3>
-    <div id="receiptItems" class="receipt-items"></div>
+    <h3>Purchased Items</h3>
+    <table class="invoice-table">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Discount</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody id="receiptItems"></tbody>
+    </table>
 
     <div class="receipt-summary">
         <p><strong>Subtotal:</strong> $<span id="subtotal"></span></p>
         <p><strong>Tax (15%):</strong> $<span id="tax"></span></p>
-        <p><strong>Total:</strong> $<span id="total"></span></p>
+        <p><strong>Discount Applied:</strong> $<span id="discountTotal"></span></p>
+        <p><strong>Total Cost:</strong> $<span id="total"></span></p>
     </div>
 
     <div class="receipt-buttons">
-        <button onclick="downloadPDF()">Download Receipt (PDF)</button>
+        <button onclick="downloadPDF()">Download Invoice (PDF)</button>
         <button onclick="window.location.href='index.html'">Return Home</button>
     </div>
 </main>
