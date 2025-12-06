@@ -385,3 +385,70 @@ footer {
             cursor: pointer;
         }
 
+ 
+        .receipt-container {
+            width: 70%;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.25);
+        }
+        .receipt-header {
+            text-align: center;
+            border-bottom: 2px solid black;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .receipt-items img {
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+        .receipt-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #ccc;
+            padding-bottom: 10px;
+        }
+        .receipt-summary {
+            margin-top: 25px;
+            font-size: 1.1rem;
+        }
+        .receipt-buttons {
+            margin-top: 25px;
+            display: flex;
+            gap: 12px;
+        }
+        .receipt-buttons button {
+            flex: 1;
+            padding: 12px;
+            background: #ff4c4c;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .invoice-alert {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .invoice-table th, .invoice-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .invoice-table th {
+            background-color: #f2f2f2;
+        }
