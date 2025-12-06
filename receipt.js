@@ -3,9 +3,16 @@ function generateInvoiceNumber() {
     return 'INV-' + Date.now() + '-' + Math.floor(Math.random() * 1000);
 }
 
-// Generate a random TRN
+// Generate a last used TRN for the current customer
 function generateTRN() {
-    return 'TRN' + Math.floor(100000 + Math.random() * 900000);
+    const lastTrn = JSON.parse(localStorage.getItem('RegistrationData')) || [];
+    
+    if (lastTrn.length > 0) {
+        
+        return lastTrn[lastTrn.length - 1].trn;
+        
+    }
+        
 }
 
 // Save invoice to localStorage
@@ -139,3 +146,4 @@ function downloadPDF() {
 window.onload = function() {
     loadReceipt();
 };
+
