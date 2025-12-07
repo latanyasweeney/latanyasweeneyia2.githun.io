@@ -1,8 +1,6 @@
-/* ========================================================
-    Javascript for dashboard.html
-    - renders frequency bar charts by gender and age group
-    - should allow searching for invoices by trn
-    ======================================================== */
+/*==================================
+  Dashboard Functionality Handling JavaScript
+  ==================================*/
 
 function ShowUserFrequency() {
     let users = JSON.parse(localStorage.getItem("RegistrationData")) || [];
