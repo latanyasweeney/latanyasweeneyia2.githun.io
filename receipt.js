@@ -1,22 +1,27 @@
+/*==================================
+  Reciept Functionality Handling JavaScript
+  ==================================*/
+
 // Generate a unique invoice number
-function generateInvoiceNumber() {
+function generateInvoiceNumber()
+{
     return 'INV-' + Date.now() + '-' + Math.floor(Math.random() * 1000);
 }
 
 // Generate a last used TRN for the current customer
-function generateTRN() {
+function generateTRN()
+{
     const lastTrn = JSON.parse(localStorage.getItem('RegistrationData')) || [];
     
-    if (lastTrn.length > 0) {
-        
+    if (lastTrn.length > 0)
+    {
         return lastTrn[lastTrn.length - 1].trn;
-        
-    }
-        
+    } 
 }
 
 // Save invoice to localStorage
-function saveInvoiceToStorage(invoice) {
+function saveInvoiceToStorage(invoice)
+{
     // Get existing invoices or create empty array
     let allInvoices = JSON.parse(localStorage.getItem('AllInvoices')) || [];
     
@@ -28,7 +33,9 @@ function saveInvoiceToStorage(invoice) {
     
     // Also save to user's personal invoice array if user is logged in
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    if (currentUser) {
+
+    if (currentUser)
+    {
         currentUser.invoices = currentUser.invoices || [];
         currentUser.invoices.push(invoice);
         localStorage.setItem('currentUser', JSON.stringify(currentUser));
@@ -36,10 +43,12 @@ function saveInvoiceToStorage(invoice) {
 }
 
 // Load and display receipt/invoice
-function loadReceipt() {
+function loadReceipt()
+{
     let order = JSON.parse(localStorage.getItem("Invoice"));
     
-    if (!order) {
+    if (!order)
+    {
         document.body.innerHTML = "<h2>No receipt available.</h2>";
         return;
     }
@@ -71,7 +80,8 @@ function loadReceipt() {
     // Use cart items if available, otherwise use order items
     const itemsToDisplay = cart.length > 0 ? cart : order.items;
     
-    itemsToDisplay.forEach(item => {
+    itemsToDisplay.forEach(item =>
+    {
         const itemTotal = item.price * item.quantity;
         const discount = item.discount || 0;
         const discountAmount = (itemTotal * discount) / 100;
@@ -80,7 +90,8 @@ function loadReceipt() {
         subtotal += finalPrice;
         discountTotal += discountAmount;
 
-        itemsHtml += `
+        itemsHtml +=
+        `
             <tr>
                 <td>${item.name}</td>
                 <td>${item.quantity}</td>
@@ -102,7 +113,8 @@ function loadReceipt() {
     document.getElementById('total').textContent = total.toFixed(2);
 
     // Create invoice object
-    const invoice = {
+    const invoice =
+    {
         invoiceNumber: document.getElementById('invoiceNumber').textContent,
         date: document.getElementById('invoiceDate').textContent,
         trn: document.getElementById('trn').textContent,
@@ -135,7 +147,8 @@ function loadReceipt() {
 }
 
 // PDF download function
-function downloadPDF() {
+function downloadPDF()
+{
     const element = document.getElementById('receiptBox');
     html2pdf()
         .from(element)
@@ -143,7 +156,7 @@ function downloadPDF() {
 }
 
 // Initialize when page loads
-window.onload = function() {
+window.onload = function()
+{
     loadReceipt();
 };
-
