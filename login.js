@@ -1,20 +1,25 @@
-//Question 1b User Authentication(localStorage)
-//Login Page
-//Validating Login Page 
-//Daynea Chambers 2400660
-let attempts=0;
+/*==================================
+  Login Functionality Handling JavaScript
+  ==================================*/
 
-document.getElementById("loginForm").addEventListener("submit", function(event){
+let attempts = 0;
+
+document.getElementById("loginForm").addEventListener("submit", function(event)
+{
     event.preventDefault(); 
  
     let trn= document.getElementById("trn").value;
     let password = document.getElementById("password").value.trim();
-    //Validating fields
+
+    // Validating fields
     if(trn=== "" || password === ""){
         alert("Please enter both trn and password.");
-    } else {
+    }
+    else
+    {
         let RegistrationData=JSON.parse(localStorage.getItem("RegistrationData")) || [];
         let user=RegistrationData.find(u=>u.trn==trn && u.password===password);
+
         if(user)
         {
              alert("Login successful!");
@@ -33,10 +38,13 @@ document.getElementById("loginForm").addEventListener("submit", function(event){
         
     }
 });
-//Reset form ddata
-document.getElementById("cancel").addEventListener("click", function() {
+
+// Reset form data
+document.getElementById("cancel").addEventListener("click", function()
+{
     let trn = document.getElementById("trn").value;
     let password = document.getElementById("password").value.trim();   
+
     if(trn=== "" || password === "" )
     {
         alert("Please enter data to clear");
@@ -47,7 +55,3 @@ document.getElementById("cancel").addEventListener("click", function() {
         alert("Form cleared");
     }
 });
-
-
-
-
