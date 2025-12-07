@@ -54,7 +54,7 @@ To test the application, you can create a new account through the registration p
 
 | Name | Role | ID |
 |------|------|-----|
-| Ajani Adlam | Developer | | 2402087 |
+| Ajani Adlam | Developer | 2402087 | 
 | Daynea Chambers | Developer | 2400660 |
 | Carlos Rodriguez | Developer | |
 | Latanya Sweeney | Developer | |
