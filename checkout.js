@@ -1,9 +1,15 @@
+/*==================================
+  Cart's Checkout Functionality Handling JavaScript
+  ==================================*/
+  
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-function loadSummary() {
+function loadSummary()
+{
     let box = document.getElementById("summaryBox");
 
-    if (cart.length === 0) {
+    if (cart.length === 0)
+    {
         box.innerHTML = "<p>Your cart is empty.</p>";
         return;
     }
@@ -11,11 +17,13 @@ function loadSummary() {
     let html = `<h3>Order Summary</h3><div class="summary-list">`;
     let total = 0;
 
-    cart.forEach(item => {
+    cart.forEach(item =>
+    {
         let lineTotal = item.price * item.quantity;
         total += lineTotal;
 
-        html += `
+        html +=
+        `
             <div class="summary-item">
                 <img src="Assets/${convertImageName(item.name)}">
                 <div>
@@ -32,17 +40,20 @@ function loadSummary() {
     box.innerHTML = html;
 }
 
-function convertImageName(name) {
+function convertImageName(name)
+{
     name = name.toLowerCase();
-    if (name.includes("KitKat")) return "KitKat.png";
-    if (name.includes("Chips")) return "Mexican-Chips.png";
-    if (name.includes("cookies")) return "Korean-cookies.png";
+    if (name.includes("kitkat")) return "KitKat.png";
+    if (name.includes("chips")) return "Mexican-Chips.png";
+    if (name.includes("honey")) return "Korean-cookies.png";
     if (name.includes("cookies")) return "usa-cookies.png";
     return "snacks.jpg";
 }
 
-function confirmOrder() {
-    let order = {
+function confirmOrder()
+{
+    let order =
+    {
         orderID: "SV" + Math.floor(Math.random() * 90000 + 10000),
         name: document.getElementById("custName").value,
         address: document.getElementById("custAddress").value,
@@ -57,12 +68,14 @@ function confirmOrder() {
     window.location.href = "receipt.html";
 }
 
-function cancelOrder() {
+function cancelOrder()
+{
     alert("Order cancelled.");
     window.location.href = "Products.html";
 }
 
-function clearCart() {
+function clearCart()
+{
     localStorage.removeItem("cart");
     location.reload();
 }
