@@ -1,7 +1,7 @@
 # SnackVerse - E-Commerce Platform
 
 ## Project Overview
-SnackVerse is a web-based e-commerce platform designed for purchasing snacks and beverages. The project features user registration and login authentication, product browsing, shopping cart management, and checkout functionality with receipt generation.
+SnackVerse is a web-based e-commerce platform designed for purchasing snacks. The project features user registration and login authentication, product browsing, shopping cart management, and checkout functionality with receipt generation.
 
 ---
 
