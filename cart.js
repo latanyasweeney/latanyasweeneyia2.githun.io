@@ -45,7 +45,7 @@ function convertImageName(name)
     name = name.toLowerCase();
     if (name.includes("kitkat")) return "KitKat.png";
     if (name.includes("chips")) return "Mexican-Chips.png";
-    if (name.includes("honey")) return "Korean-cookies.png";
+    if (name.includes("candy")) return "Korean-cookies.png";
     if (name.includes("cookies")) return "usa-cookies.png";
     return "snacks.jpg";
 }
