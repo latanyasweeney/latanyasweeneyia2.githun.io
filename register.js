@@ -46,7 +46,12 @@ document.getElementById("registerForm").addEventListener("submit", function(even
         alert("TRN must be a 9-digit number.");
         return;
     }
-
+    //Validate phone number
+    let phonePattern=/^\d{3}-\d{3}-\d{4}$/;
+    if(!phonenumber.match(phonePattern)){
+        alert("Phone number must be an 10-digit number.");
+        return;
+    }
     // Check password length
     if(password.length < 8){
         alert("Password must be at least 8 characters long.");
@@ -102,4 +107,5 @@ document.getElementById("cancel").addEventListener("click", function() {
         alert("Form cleared");
     }
 });
+
 
