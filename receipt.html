@@ -1,66 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnackVerse | Invoice</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SnackVerse | Invoice</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    </head>
 
+    <body>
+        <main class="receipt-container" id="receiptBox">
+            <div class="invoice-alert" id="emailAlert">
+                Invoice has been sent to your email.
+            </div>
 
-</head>
+            <div class="receipt-header">
+                <h2>SnackVerse - Invoice</h2>
+                <p><strong>Date:</strong> <span id="invoiceDate"></span></p>
+                <p><strong>Invoice #:</strong> <span id="invoiceNumber"></span></p>
+                <p><strong>TRN:</strong> <span id="trn"></span></p>
+            </div>
 
-<body>
+            <h3>Customer / Shipping Information</h3>
+            <p><strong>Name:</strong> <span id="custName"></span></p>
+            <p><strong>Address:</strong> <span id="custAddress"></span></p>
+            <p><strong>Email:</strong> <span id="custEmail"></span></p>
 
-<main class="receipt-container" id="receiptBox">
-    <div class="invoice-alert" id="emailAlert">
-        Invoice has been sent to your email.
-    </div>
+            <h3>Payment Information</h3>
+            <p><strong>Cardholder:</strong> <span id="cardName"></span></p>
+            <p><strong>Card Number:</strong> **** **** **** <span id="cardLast4"></span></p>
 
-    <div class="receipt-header">
-        <h2>SnackVerse - Invoice</h2>
-        <p><strong>Date:</strong> <span id="invoiceDate"></span></p>
-        <p><strong>Invoice #:</strong> <span id="invoiceNumber"></span></p>
-        <p><strong>TRN:</strong> <span id="trn"></span></p>
-    </div>
+            <h3>Purchased Items</h3>
+            <table class="invoice-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Discount</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="receiptItems"></tbody>
+            </table>
 
-    <h3>Customer / Shipping Information</h3>
-    <p><strong>Name:</strong> <span id="custName"></span></p>
-    <p><strong>Address:</strong> <span id="custAddress"></span></p>
-    <p><strong>Email:</strong> <span id="custEmail"></span></p>
+            <div class="receipt-summary">
+                <p><strong>Subtotal:</strong> $<span id="subtotal"></span></p>
+                <p><strong>Tax (15%):</strong> $<span id="tax"></span></p>
+                <p><strong>Discount Applied:</strong> $<span id="discountTotal"></span></p>
+                <p><strong>Total Cost:</strong> $<span id="total"></span></p>
+            </div>
 
-    <h3>Payment Information</h3>
-    <p><strong>Cardholder:</strong> <span id="cardName"></span></p>
-    <p><strong>Card Number:</strong> **** **** **** <span id="cardLast4"></span></p>
+            <div class="receipt-buttons">
+                <button onclick="downloadPDF()">Download Invoice (PDF)</button>
+                <button onclick="window.location.href='index.html'">Return Home</button>
+            </div>
+        </main>
 
-    <h3>Purchased Items</h3>
-    <table class="invoice-table">
-        <thead>
-            <tr>
-                <th>Item</th>
-                <th>Quantity</th>
-                <th>Unit Price</th>
-                <th>Discount</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-        <tbody id="receiptItems"></tbody>
-    </table>
-
-    <div class="receipt-summary">
-        <p><strong>Subtotal:</strong> $<span id="subtotal"></span></p>
-        <p><strong>Tax (15%):</strong> $<span id="tax"></span></p>
-        <p><strong>Discount Applied:</strong> $<span id="discountTotal"></span></p>
-        <p><strong>Total Cost:</strong> $<span id="total"></span></p>
-    </div>
-
-    <div class="receipt-buttons">
-        <button onclick="downloadPDF()">Download Invoice (PDF)</button>
-        <button onclick="window.location.href='index.html'">Return Home</button>
-    </div>
-</main>
-
-<script src="receipt.js"></script>
-</body>
+        <script src="receipt.js"></script>
+    </body>
 </html>
-
