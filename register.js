@@ -15,6 +15,8 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     let password = document.getElementById("password").value.trim();
     let confirm = document.getElementById("confirm").value.trim();
     let dateofregistration=new Date();
+    let cart={};
+    let invoices=[];
 
     // Basic validation
     if(firstname === "" || lastname===""| dateofbirth === "" || gender===""| phonenumber===""| email===""|trn=== "" || password === "" || confirm === ""){
@@ -70,7 +72,7 @@ document.getElementById("registerForm").addEventListener("submit", function(even
             alert("TRN already registered.");
             return;
         }
-        RegistrationData.push({firstname,lastname,dateofbirth,gender,phonenumber,email,trn,password,dateofregistration});
+        RegistrationData.push({firstname,lastname,dateofbirth,gender,phonenumber,email,trn,password,dateofregistration,cart,invoices});
         try
         {
             localStorage.setItem("RegistrationData",JSON.stringify(RegistrationData));
@@ -107,5 +109,6 @@ document.getElementById("cancel").addEventListener("click", function() {
         alert("Form cleared");
     }
 });
+
 
 
