@@ -54,9 +54,11 @@ To test the application, you can create a new account through the registration p
 
 | Name | Role | ID |
 |------|------|-----|
-| Latanya Sweeney | Developer | |
-| Daynea Chambers | Developer |  |
 | Ajani Adlam | Developer | |
+| Daynea Chambers | Developer | 2400660 |
+| Carlos Rodrigues | Developer | |
+| Latanya Sweeney | Developer | |
+| Katrina Watson | Developer | |
 
 
 ## Frameworks & Tools Used
