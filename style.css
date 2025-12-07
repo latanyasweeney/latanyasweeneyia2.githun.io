@@ -1,24 +1,30 @@
 /* === General Page Styles === */
-body {
+body
+{
     font-family: Arial, sans-serif;
     background-color: #FFD93D;
     margin: 0;
     padding: 0;
 }
 
+
+
 /* === Header and Navigation Bar === */
-header {
+header
+{
     background-color: #FF4C4C;
     padding: 15px;
     text-align: center;
 }
 
-header h1 {
+header h1
+{
     color: white;
     margin-bottom: 10px;
 }
 
-nav a {
+nav a
+{
     color: white;
     text-decoration: none;
     margin: 0 10px;
@@ -29,18 +35,103 @@ nav a {
     transition: 0.3s;
 }
 
-nav a:hover {
+nav a:hover
+{
     background-color: white;
     color: #FF4C4C;
 }
 
-.active {
+.active
+{
     background-color: white;
     color: #FF4C4C;
 }
+
+
+
+/* === Dashboard Data Styling === */
+.dashboard-section
+{
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px 25px 45px 25px;
+    border-radius: 14px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.chart-title
+{
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ff4c4c;
+}
+
+.bar-row
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.bar-label
+{
+    min-width: 100px;
+    text-align: right;
+    margin-right: 14px;
+    font-size: 1.07rem;
+    color: #444;
+}
+
+.bar
+{
+    height: 24px;
+    border-radius: 5px;
+    margin-right: 12px;
+    background: #FFD93D;
+    box-shadow: 0 2px 8px rgba(255,76,76,0.12);
+}
+
+.bar-count
+{
+    font-weight: bold;
+    color: #ff4c4c;
+}
+
+.invoice-search
+{
+    margin-top: 30px;
+    padding-top: 16px;
+    border-top: 2px solid #eee;
+}
+
+#invoiceResults
+{
+    margin-top: 12px;
+    background: #fff7f7;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.dashboard-title
+{
+    text-align:center; color:#ff4c4c;
+}
+
+@media (max-width: 700px)
+{
+    .dashboard-section { max-width:98vw; }
+    .bar-label { min-width: 70px; font-size:0.95rem; }
+    .bar { height: 18px; }
+}
+
+
 
 /* === Login Box === */
-.login-container, .reset-container {
+.login-container, .reset-container
+{
     background-color: white;
     width: 320px;
     margin: 60px auto;
@@ -50,18 +141,21 @@ nav a:hover {
     text-align: center;
 }
 
-.login-container h2 {
+.login-container h2
+{
     color: #FF4C4C;
 }
 
-.login-container label, .reset-container label {
+.login-container label, .reset-container label
+{
     display: block;
     text-align: left;
     margin-top: 10px;
     font-weight: bold;
 }
 
-.login-container input, .reset-container input {
+.login-container input, .reset-container input
+{
     width: 95%;
     padding: 8px;
     margin-top: 5px;
@@ -69,7 +163,8 @@ nav a:hover {
     border-radius: 6px;
 }
 
-.login-container button, .reset-container button {
+.login-container button, .reset-container button
+{
     width: 100%;
     margin-top: 15px;
     padding: 10px;
@@ -80,23 +175,24 @@ nav a:hover {
     cursor: pointer;
 }
 
-.login-container button:hover {
+.login-container button:hover
+{
     background-color: #E53E3E;
 }
 
 /* === Footer === */
-footer {
+footer
+{
     text-align: center;
+    padding: 1rem 1.25rem;
+    margin-top: 2rem;
     background-color: #FF4C4C;
     color: white;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
 /* === REGISTRATION PAGE === */
-.register-container {
+.register-container
+{
     background-color: white;
     width: 340px;
     margin: 60px auto;
@@ -106,18 +202,21 @@ footer {
     text-align: center;
 }
 
-.register-container h2 {
+.register-container h2
+{
     color: #FF4C4C;
 }
 
-.register-container label {
+.register-container label
+{
     display: block;
     text-align: left;
     margin-top: 10px;
     font-weight: bold;
 }
 
-.register-container input, .register-container select {
+.register-container input, .register-container select
+{
     width: 95%;
     padding: 8px;
     margin-top: 5px;
@@ -125,7 +224,8 @@ footer {
     border-radius: 6px;
 }
 
-.register-container button {
+.register-container button
+{
     width: 100%;
     margin-top: 15px;
     padding: 10px;
@@ -136,28 +236,34 @@ footer {
     cursor: pointer;
 }
 
-.register-container button:hover {
+.register-container button:hover
+{
     background-color: #E53E3E;
 }
+
 /* === PRODUCTS PAGE === */
-.product-section {
+.product-section
+{
     padding: 20px;
     text-align: center;
 }
 
-.product-section h2 {
+.product-section h2
+{
     color: #FF4C4C;
     margin-bottom: 20px;
 }
 
-.product-grid {
+.product-grid
+{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.product-card {
+.product-card
+{
     background-color: white;
     width: 220px;
     padding: 15px;
@@ -167,28 +273,33 @@ footer {
     transition: transform 0.3s ease;
 }
 
-.product-card:hover {
+.product-card:hover
+{
     transform: scale(1.05);
 }
 
-.product-card img {
+.product-card img
+{
     width: 100%;
     height: 150px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-.product-card h3 {
+.product-card h3
+{
     color: #333;
     margin: 10px 0;
 }
 
-.product-card p {
+.product-card p
+{
     font-weight: bold;
     color: #FF4C4C;
 }
 
-.product-card button {
+.product-card button
+{
     background-color: #FF4C4C;
     color: white;
     border: none;
@@ -197,18 +308,23 @@ footer {
     cursor: pointer;
 }
 
-.product-card button:hover {
+.product-card button:hover
+{
     background-color: #E53E3E;
 }
 
 /* Responsive for smaller screens */
-@media (max-width: 600px) {
-    .product-grid {
+@media (max-width: 600px)
+{
+    .product-grid
+    {
         flex-direction: column;
         align-items: center;
     }
 }
-.cart-container {
+
+.cart-container 
+{
     width: 80%;
     margin: 40px auto;
     background: white;
@@ -217,26 +333,31 @@ footer {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.cart-table {
+.cart-table
+{
     width: 100%;
     border-collapse: collapse;
 }
 
-.cart-table th, .cart-table td {
+.cart-table th, .cart-table td
+{
     border: 1px solid #ccc;
     padding: 10px;
 }
 
-.totals {
+.totals
+{
     margin-top: 20px;
     font-size: 1.2rem;
 }
 
-.cart-buttons {
+.cart-buttons
+{
     margin-top: 20px;
 }
 
-.cart-buttons button {
+.cart-buttons button
+{
     padding: 12px;
     margin-right: 10px;
     background-color: #FF4C4C;
@@ -245,7 +366,9 @@ footer {
     border-radius: 6px;
     cursor: pointer;
 }
-.checkout-container {
+
+.checkout-container
+{
     width: 80%;
     margin: 40px auto;
     background: white;
@@ -254,20 +377,23 @@ footer {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.summary-box {
+.summary-box
+{
     margin-bottom: 25px;
     background: #fff7f7;
     padding: 15px;
     border-radius: 10px;
 }
 
-.summary-list {
+.summary-list
+{
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.summary-item {
+.summary-item
+{
     display: flex;
     gap: 15px;
     align-items: center;
@@ -277,20 +403,23 @@ footer {
     border: 1px solid #ddd;
 }
 
-.summary-item img {
+.summary-item img
+{
     width: 80px;
     height: 80px;
     border-radius: 8px;
     object-fit: cover;
 }
 
-.checkout-buttons {
+.checkout-buttons
+{
     margin-top: 20px;
     display: flex;
     gap: 10px;
 }
 
-.checkout-buttons button {
+.checkout-buttons button
+{
     padding: 10px;
     flex: 1;
     background-color: #ff4c4c;
@@ -300,198 +429,242 @@ footer {
     cursor: pointer;
 }
 
-.about-header {
-            text-align: center;
-            padding: 30px;
-            color: white;
-            background-color: rgba(0,0,0,0.6);
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
+.about-header
+{
+    text-align: center;
+    padding: 30px;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
 
-        body {
-            background-image: url("photo.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
+body
+{
+    background-image: url("Assets/photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
-        .section-card {
-            background-color: rgba(255, 255, 255, 0.95);
-            width: 75%;
-            margin: 25px auto;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 12px rgba(0,0,0,0.3);
-            animation: fadeUp 1s ease-in-out;
-        }
+.section-card
+{
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 75%;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    animation: fadeUp 1s ease-in-out;
+}
 
-        .section-card h3 {
-            margin-bottom: 10px;
-            color: #ff4c4c;
-        }
+.section-card h3
+{
+    margin-bottom: 10px;
+    color: #ff4c4c;
+}
 
-        .section-card p, .section-card a {
-            font-size: 1.2rem;
-            color: #222;
-        }
+.section-card p, .section-card a
+{
+    font-size: 1.2rem;
+    color: #222;
+}
 
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+@keyframes fadeUp
+{
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-         .receipt-container {
-            width: 70%;
-            margin: 40px auto;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 0 12px rgba(0,0,0,0.25);
-        }
-        .receipt-header {
-            text-align: center;
-            border-bottom: 2px solid black;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .receipt-items img {
-            width: 70px;
-            height: 70px;
-            border-radius: 8px;
-            margin-right: 10px;
-        }
-        .receipt-row {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .receipt-summary {
-            margin-top: 25px;
-            font-size: 1.1rem;
-        }
-        .receipt-buttons {
-            margin-top: 25px;
-            display: flex;
-            gap: 12px;
-        }
-        .receipt-buttons button {
-            flex: 1;
-            padding: 12px;
-            background: #ff4c4c;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
+.receipt-container
+    {
+    width: 70%;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.25);
+}
 
- 
-        .receipt-container {
-            width: 70%;
-            margin: 40px auto;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 0 12px rgba(0,0,0,0.25);
-        }
-        .receipt-header {
-            text-align: center;
-            border-bottom: 2px solid black;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .receipt-items img {
-            width: 70px;
-            height: 70px;
-            border-radius: 8px;
-            margin-right: 10px;
-        }
-        .receipt-row {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            border-bottom: 1px dashed #ccc;
-            padding-bottom: 10px;
-        }
-        .receipt-summary {
-            margin-top: 25px;
-            font-size: 1.1rem;
-        }
-        .receipt-buttons {
-            margin-top: 25px;
-            display: flex;
-            gap: 12px;
-        }
-        .receipt-buttons button {
-            flex: 1;
-            padding: 12px;
-            background: #ff4c4c;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        .invoice-alert {
-            background-color: #d4edda;
-            color: #155724;
-            padding: 12px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            display: none;
-        }
-        .invoice-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-        .invoice-table th, .invoice-table td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        .invoice-table th {
-            background-color: #f2f2f2;
-        }
+.receipt-header
+{
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.receipt-items img
+{
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.receipt-row
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.receipt-summary
+{
+    margin-top: 25px;
+    font-size: 1.1rem;
+}
+
+.receipt-buttons
+{
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+}
+
+.receipt-buttons button
+{
+    flex: 1;
+    padding: 12px;
+    background: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.receipt-container
+{
+    width: 70%;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.25);
+}
+
+.receipt-header
+{
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.receipt-items img
+{
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.receipt-row
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 10px;
+}
+
+.receipt-summary
+{
+    margin-top: 25px;
+    font-size: 1.1rem;
+}
+
+.receipt-buttons
+{
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+}
+
+.receipt-buttons button
+{
+    flex: 1;
+    padding: 12px;
+    background: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.invoice-alert
+{
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.invoice-table
+{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.invoice-table th, .invoice-table td
+{
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.invoice-table th
+{
+    background-color: #f2f2f2;
+}
 
 
-        .about-header {
-            text-align: center;
-            padding: 30px;
-            color: white;
-            background-color: rgba(0,0,0,0.6);
-            border-radius: 12px;
-            margin-bottom: 20px;
-        }
+.about-header
+{
+    text-align: center;
+    padding: 30px;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
 
-        body {
-            background-image: url("photo.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
+body
+{
+    background-image: url("Assets/photo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
-        .section-card {
-            background-color: rgba(255, 255, 255, 0.95);
-            width: 75%;
-            margin: 25px auto;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 12px rgba(0,0,0,0.3);
-            animation: fadeUp 1s ease-in-out;
-        }
+.section-card
+{
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 75%;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+    animation: fadeUp 1s ease-in-out;
+}
 
-        .section-card h3 {
-            margin-bottom: 10px;
-            color: #ff4c4c;
-        }
+.section-card h3
+{
+    margin-bottom: 10px;
+    color: #ff4c4c;
+}
 
-        .section-card p, .section-card a {
-            font-size: 1.2rem;
-            color: #222;
-        }
+.section-card p, .section-card a
+{
+    font-size: 1.2rem;
+    color: #222;
+}
 
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    
+@keyframes fadeUp
+{
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
