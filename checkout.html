@@ -1,0 +1,73 @@
+<!-- KATRINA WATSON
+2404855 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnackVerse | Checkout</title>
+    <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+
+<header>
+    <h1>SnackVerse</h1>
+    <nav>
+        <a href="about.html">About Us</a>
+        <a href="register.html">Registration</a>
+        <a href="login.html">Login</a>
+        <a href="Products.html">Products</a>
+        <a href="Cart.html">Cart</a>
+        <a href="checkout.html" class="active">Checkout</a> 
+    </nav>
+</header>
+
+<main class="checkout-container">
+    <h2>Checkout</h2>
+
+    <div id="summaryBox" class="summary-box"></div>
+
+    <form id="checkoutForm">
+        <h3>Shipping Details</h3>
+
+        <label>Name:</label>
+        <input type="text" id="custName" required>
+
+        <label>Address:</label>
+        <input type="text" id="custAddress" required>
+
+        <!-- REMOVED USER AMOUNT PAYING -->
+
+        <h3>Card Information</h3>
+
+        <label>Cardholder Name:</label>
+        <input type="text" id="cardName" required>
+
+        <label>Card Number:</label>
+        <input type="text" id="cardNumber" maxlength="16" required>
+
+        <label>Expiry Date:</label>
+        <input type="month" id="cardExpiry" required>
+
+        <label>CVV:</label>
+        <input type="text" id="cardCVV" maxlength="3" required>
+
+        <div class="checkout-buttons">
+            <button type="button" onclick="confirmOrder()">Confirm</button>
+            <button type="button" onclick="cancelOrder()">Cancel</button>
+            <button type="button" onclick="clearCart()">Clear All</button>
+            <button type="button" onclick="history.back()">Close</button> 
+        </div>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2025 SnackVerse. All Rights Reserved.</p>
+</footer>
+
+<script src="checkout.js"></script>
+</body>
+</html>
+
+
+
