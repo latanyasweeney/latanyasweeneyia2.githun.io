@@ -54,13 +54,10 @@ To test the application, you can create a new account through the registration p
 
 | Name | Role | ID |
 |------|------|-----|
-| Latanya Sweeney | Developer ||
-| [Team Member 2] | Developer | [ID] |
-| [Team Member 3] | Developer | [ID] |
+| Latanya Sweeney | Developer | |
+| Daynea Chambers | Developer |  |
+| Ajani Adlam | Developer | |
 
-*Please update this section with all group members' information*
-
----
 
 ## Frameworks & Tools Used
 
@@ -116,10 +113,8 @@ latanyasweeneyia2.github.io/
 - Password reset functionality
 
 ### 2. Product Management
-- Browse available snacks and beverages
-- Filter products by category
+- Browse available snacks
 - Product details and pricing
-- Inventory management
 
 ### 3. Shopping Cart
 - Add/remove items from cart
@@ -132,8 +127,6 @@ latanyasweeneyia2.github.io/
 - Order total calculation with taxes
 - Receipt generation
 - Order history tracking
-
----
 
 ## Technical Details
 
@@ -178,18 +171,6 @@ latanyasweeneyia2.github.io/
 
 ### CSS
 - **style.css** - Contains all styling for the application
-
----
-
-## Browser Compatibility
-
-- ✅ Chrome (Latest)
-- ✅ Firefox (Latest)
-- ✅ Safari (Latest)
-- ✅ Edge (Latest)
-- ✅ Mobile browsers
-
----
 
 ## Troubleshooting
 
