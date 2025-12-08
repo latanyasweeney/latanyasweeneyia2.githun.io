@@ -32,6 +32,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event)
             if (attempts==3)
             {
                alert("Your account has been locked");
+              window.location.href="Reset.html";
                
             }
         }
@@ -55,3 +56,4 @@ document.getElementById("cancel").addEventListener("click", function()
         alert("Form cleared");
     }
 });
+
