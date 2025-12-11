@@ -1,5 +1,5 @@
 /*==================================
-  Reseting Password Functionality Handling JavaScript
+  Q1 LOGIN PAGE-Reseting Password Functionality Handling JavaScript
   ==================================*/
 
 document.getElementById('resetForm').addEventListener("submit",function(event)
@@ -61,3 +61,4 @@ document.getElementById('resetForm').addEventListener("submit",function(event)
         }         
     }
 });
+
