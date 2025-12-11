@@ -1,5 +1,5 @@
 /*==================================
-  Registering Functionality Handling JavaScript
+Q1 USER Authentication  Registration Functionality Handling JavaScript
   ==================================*/
 document.getElementById("registerForm").addEventListener("submit", function(event)
 {
@@ -131,3 +131,4 @@ document.getElementById("cancel").addEventListener("click", function()
         alert("Form cleared");
     }
 });
+
