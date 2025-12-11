@@ -1,5 +1,5 @@
 /*==================================
-  Login Functionality Handling JavaScript
+  Q1 LOGIN PAGE Login Functionality Handling JavaScript
   ==================================*/
 
 let attempts = 0;
@@ -56,6 +56,7 @@ document.getElementById("cancel").addEventListener("click", function()
         alert("Form cleared");
     }
 });
+
 
 
 
