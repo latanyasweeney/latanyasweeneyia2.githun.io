@@ -1,5 +1,5 @@
 /*==================================
-  Cart Page JavaScript
+    Q3 Cart Page JavaScript
   ==================================*/
   
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -109,5 +109,6 @@ function clearCart()
         loadCart();
     }
 }
+
 
 window.onload = loadCart;
